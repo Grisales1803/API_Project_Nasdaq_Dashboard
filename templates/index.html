@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Metrics Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80%;
+            margin-top: 20px;
+        }
+        .chart-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .chart-container svg {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .centered-table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50%;
+            color: black;
+            text-align: center;
+        }
+        .centered-table th, .centered-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .centered-table th {
+            background-color: #f2f2f2;
+        }
+        p {
+            margin: 0 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoin Metrics Dashboard</h1>
+        <table class="centered-table">
+            <tr>
+                <th>Date</th>
+                <th>Price (USD)</th>
+            </tr>
+            <tr>
+                <td>{{date}}</td>
+                <td>{{price}}</td>
+            </tr>
+        </table>
+        <div class="chart-container">
+            <h2>Bitcoin Trade Volume vs Transaction Volume Ratio</h2>
+            {% include 'bitcoin_trade_volume_vs_transaction_volume_ratio.svg' %}
+            <p>The Bitcoin Trade Volume vs Transaction Volume Ratio compares the amount of Bitcoin traded on exchanges to the number of transactions conducted on the Bitcoin network. This ratio provides insights into the level of trading activity versus the actual usage of Bitcoin for transactions. A higher ratio may indicate increased speculative trading relative to the number of transactions, suggesting that more Bitcoin is being traded rather than used for payments or transfers. Notably, an extreme value of 224.0653 was observed on 2011-06-20, coinciding with a peak in the Bitcoin price. Additionally, over the past year, the ratio has been increasing, indicating a higher level of speculative trading compared to the number of transactions. </p>
+        </div>
+        <div class="chart-container">
+            <h2>Bitcoin Number of Transactions</h2>
+            {% include 'bitcoin_number_transactions.svg' %}
+            <p>The Bitcoin Number of Transactions metric represents the total count of confirmed transactions on the Bitcoin network over a given period. This metric is crucial for understanding the network’s activity and adoption level. A higher number of transactions indicates more frequent use of Bitcoin for transfers, payments, and other applications, reflecting the overall health and utility of the Bitcoin network. There appears to be a correlation between the number of transactions and the historic Bitcoin price. While this observation would need further confirmation with quantitative methods, the peaks and valleys in transaction volume exhibit a similar pattern to the historical Bitcoin price.</p>
+        </div>
+    </div>
+</body>
+</html>
