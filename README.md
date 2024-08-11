@@ -10,7 +10,7 @@ This project is a Bitcoin Metrics Dashboard implemented using Flask. It provides
 
 The data for this project is sourced from Nasdaq Data Link. The key components are:
 
-1. **Data Retrieval**: The `nasdaqdatalink` library is used to fetch data from the Nasdaq Data Link API. Specifically, the Bitcoin price and various Bitcoin metrics such as trade volume vs transaction volume ratio and the number of transactions are retrieved.
+1. **Data Retrieval**: The `nasdaqdatalink` library is used to fetch data from the Nasdaq Data Link API. Specifically, the Bitcoin price and various Bitcoin metrics such as trade volume vs transaction volume ratio and the number of transactions are retrieved. See [Nasdaq API](https://www.nasdaq.com/solutions/data-link-api)
    
 2. **Data Processing**: The retrieved data is processed to extract relevant information, including the latest Bitcoin price and historical metrics. This data is then used to generate visualizations.
 
