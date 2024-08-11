@@ -18,6 +18,8 @@ The data for this project is sourced from Nasdaq Data Link. The key components a
 
 4. **Web Application**: The Flask application serves the data and charts on a web page. The `index.html` file renders the latest Bitcoin price and the generated charts, providing users with insights into Bitcoin metrics.
 
+[Check this project on Replit](https://replit.com/@grisales1803/Assignment8ConnectedData#main.py)
+
 ## Conclusions
 
 The Bitcoin Metrics Dashboard offers valuable insights into Bitcoin trading activity and network usage. By visualizing metrics such as the trade volume vs transaction volume ratio and the number of transactions, users can better understand market dynamics and network adoption. The dashboard highlights trends and provides context for Bitcoin’s historical performance and trading behavior.
